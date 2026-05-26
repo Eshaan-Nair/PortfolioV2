@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Engineer Portfolio 🚀
 
-## Getting Started
+A highly polished, cinematic, and responsive personal portfolio built with **Next.js**, featuring smooth scroll animations, a custom dark/light theme engine, and a fully functional AI Chatbot powered by **Groq**.
 
-First, run the development server:
+## Features
+- **Cinematic Animations**: Powered by `framer-motion` for buttery smooth section reveals.
+- **Interactive Particle Background**: A responsive 2D canvas network that dynamically shifts colors based on the active theme.
+- **Next-Gen Chatbot**: An integrated sliding chat widget using the Vercel AI SDK and Groq's lightning-fast `llama3-8b` model. It acts as a personal AI agent to answer recruiter questions about your resume.
+- **Responsive Geometry**: Custom CSS engineering to scale complex UI components (like the Skills Honeycomb) seamlessly down to mobile screens.
 
+---
+
+## 🛠️ Getting Started
+
+Follow these instructions to run the portfolio locally on your machine.
+
+### 1. Clone & Install
+Clone the repository and install the dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
+This project uses the **Groq API** to power the AI Chatbot. You need to provide an API key for the chatbot to work.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Rename the `.env.example` file to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Open `.env.local` and paste in your Groq API key:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+   *(You can get a free API key at [console.groq.com](https://console.groq.com))*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Run the Development Server
+Start the local Next.js server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Customizing the AI Chatbot for Yourself
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you are using this code for your own portfolio, you **must** update the AI's "Brain" so it knows your personal details instead of Eshaan's.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Open `src/app/api/chat/route.ts`.
+2. Locate the `systemPrompt` variable.
+3. Replace the text with your own name, education, projects, and work experience. The LLM will strictly use the context provided in this prompt to answer any questions users ask it!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+When you are ready to deploy to Vercel, make sure you add `GROQ_API_KEY` to your Vercel Project Environment Variables before hitting deploy!
