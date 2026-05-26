@@ -16,14 +16,18 @@ export default function Chatbot() {
   const scrollRef = useRef<HTMLDivElement>(null);
   
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', role: "assistant", content: "Hi! I'm Eshaan's AI agent. Ask me about his experience, projects, or skills!" }
+    { id: '1', role: "assistant", content: "Hi! I'm Eshaan's AI Assistant. Ask me anything about his experience, projects, or skills!" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(32);
+  const [showTooltip, setShowTooltip] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowTooltip(false);
+      }
       const footer = document.querySelector('footer');
       if (!footer) return;
       
@@ -123,6 +127,44 @@ export default function Chatbot() {
         <TbMessageChatbot size={28} />
       </button>
 
+      <AnimatePresence>
+        {!isOpen && showTooltip && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 10 }}
+            style={{
+              position: "fixed",
+              bottom: `${bottomOffset + 70}px`,
+              left: "2rem",
+              backgroundColor: "var(--foreground)",
+              color: "var(--background)",
+              padding: "0.5rem 1rem",
+              borderRadius: "8px",
+              fontSize: "0.85rem",
+              fontWeight: 600,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              zIndex: 40,
+              pointerEvents: "none",
+              whiteSpace: "nowrap"
+            }}
+          >
+            Chat with my AI
+            {/* Tooltip triangle tail */}
+            <div style={{
+              position: "absolute",
+              bottom: "-4px",
+              left: "20px",
+              width: "10px",
+              height: "10px",
+              backgroundColor: "var(--foreground)",
+              transform: "rotate(45deg)",
+              zIndex: -1
+            }} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
@@ -160,7 +202,7 @@ export default function Chatbot() {
             }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <TbMessageChatbot size={22} color="var(--primary)" />
-                <span style={{ fontWeight: 600, fontFamily: "var(--font-sans)", fontSize: "1rem" }}>Eshaan AI</span>
+                <span style={{ fontWeight: 600, fontFamily: "var(--font-sans)", fontSize: "1rem" }}>AI Assistant</span>
               </div>
               <button 
                 onClick={() => setIsOpen(false)}

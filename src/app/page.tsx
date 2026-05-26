@@ -17,13 +17,16 @@ export default function Home() {
           <ScrollReveal delay={0.1}>
             <section id="about" style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '1.05rem', display: 'flex', flexDirection: 'column', gap: '1rem', paddingTop: '2rem' }}>
               <p>
-                I'm a Computer Science student at KIIT University who builds things end-to-end — from React frontends to vector databases to Chrome extensions. My work lives at the intersection of full-stack development and applied AI, where I care less about what's trendy and more about what actually solves the problem.
+                I'm a Computer Science student at KIIT University who builds things end-to-end from React frontends to vector databases to Chrome extensions. My work lives at the intersection of full-stack development and applied AI, where I care less about what's trendy and more about what actually solves the problem.
               </p>
               <p>
-                Most recently, I built Glia AI — a local-first memory system for AI tools like Claude and Cursor — because I was frustrated that these tools forgot everything between sessions. That's usually how my projects start: something annoys me, and I build a fix.
+                Most recently, I built ArcRift (formerly Glia AI), a local-first memory system for AI tools like Claude and Cursor because I was frustrated that these tools forgot everything between sessions. That's usually how my projects start: something annoys me, and I build a fix. Whether it's optimizing graph algorithms for a financial utility like Smart Expense Splitter, or architecting local LLM workflows, I enjoy building tools that empower users.
               </p>
               <p>
-                Outside of code, I've led design teams, edited videos, and run branding for hackathons — which means I think about the full picture, not just the technical layer.
+                As a freelance developer, I've had the opportunity to architect and deploy applications for independent clients, specializing in modern React ecosystems and Node.js backends. I focus heavily on writing clean, maintainable code and designing user interfaces that feel instantly intuitive. 
+              </p>
+              <p>
+                Outside of code, I've led design teams, edited videos, and run branding for hackathons which means I think about the full picture, not just the technical layer. I believe the best engineering happens when you understand the design and the user experience just as well as the backend architecture.
               </p>
             </section>
           </ScrollReveal>
@@ -57,16 +60,16 @@ export default function Home() {
               <Contact />
             </section>
           </ScrollReveal>
-          
+
         </main>
       </div>
 
-      <footer style={{ 
+      <footer style={{
         maxWidth: '1400px',
         margin: '0 auto',
         padding: '2rem',
         borderTop: '1px solid var(--border-color)',
-        display: 'flex', 
+        display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
         color: 'var(--text-muted)',
