@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TbMessageChatbot, TbX, TbSend } from "react-icons/tb";
 import ReactMarkdown from 'react-markdown';
+import { usePathname } from 'next/navigation';
 
 interface Message {
   id: string;
@@ -22,6 +23,7 @@ export default function Chatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(32);
   const [showTooltip, setShowTooltip] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,6 +98,10 @@ export default function Chatbot() {
       setIsLoading(false);
     }
   };
+
+  if (pathname === '/fun') {
+    return null;
+  }
 
   return (
     <>

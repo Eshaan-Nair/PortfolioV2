@@ -7,6 +7,7 @@ import InteractiveBackground from "@/components/InteractiveBackground";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import Chatbot from "@/components/Chatbot";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const syne = Syne({ subsets: ["latin"], variable: "--font-display" });
@@ -46,6 +47,7 @@ export default function RootLayout({
           <div style={{ position: 'relative', zIndex: 1 }}>
             {children}
           </div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

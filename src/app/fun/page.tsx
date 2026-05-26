@@ -11,9 +11,10 @@ export default function FunSide() {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: 'var(--background)',
       color: 'var(--foreground)',
-      fontFamily: 'var(--font-sans)'
+      fontFamily: 'var(--font-sans)',
+      position: 'relative',
+      zIndex: 10
     }}>
       <h1 style={{
         fontFamily: 'var(--font-display)',
