@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { TbSun, TbMoon } from "react-icons/tb";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(32);
 
@@ -38,7 +38,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       style={{
         position: 'fixed',
         bottom: `${bottomOffset}px`,
@@ -60,7 +60,7 @@ export default function ThemeToggle() {
       onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       aria-label="Toggle Dark Mode"
     >
-      {theme === 'dark' ? <TbSun size={24} /> : <TbMoon size={24} />}
+      {resolvedTheme === 'dark' ? <TbSun size={24} /> : <TbMoon size={24} />}
     </button>
   );
 }
