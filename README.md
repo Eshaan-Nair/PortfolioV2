@@ -1,4 +1,4 @@
-# AI Engineer Portfolio 🚀
+# AI Engineer Portfolio
 
 A highly polished, cinematic, and responsive personal portfolio built with **Next.js**, featuring smooth scroll animations, a custom dark/light theme engine, and a fully functional AI Chatbot powered by **Groq**.
 
@@ -10,7 +10,7 @@ A highly polished, cinematic, and responsive personal portfolio built with **Nex
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 Follow these instructions to run the portfolio locally on your machine.
 
@@ -42,7 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ---
 
-## 🧠 Customizing the AI Chatbot for Yourself
+## Customizing the AI Chatbot for Yourself
 
 If you are using this code for your own portfolio, you **must** update the AI's "Brain" so it knows your personal details instead of Eshaan's.
 
