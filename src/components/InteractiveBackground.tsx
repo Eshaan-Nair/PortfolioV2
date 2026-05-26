@@ -1,13 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function InteractiveBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -20,7 +26,6 @@ export default function InteractiveBackground() {
     canvas.height = height;
 
     const particles: { x: number; y: number; vx: number; vy: number; radius: number }[] = [];
-    // Adjust density based on screen size
     const particleCount = Math.floor((width * height) / 15000); 
 
     for (let i = 0; i < particleCount; i++) {
@@ -69,7 +74,6 @@ export default function InteractiveBackground() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          // Draw lines between close particles
           if (dist < 120) {
             ctx.strokeStyle = `rgba(${strokeRgb}, ${0.15 - dist / 800})`;
             ctx.beginPath();
@@ -79,7 +83,6 @@ export default function InteractiveBackground() {
           }
         }
 
-        // Draw lines from mouse to particles
         const mdx = particles[i].x - mouse.x;
         const mdy = particles[i].y - mouse.y;
         const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
@@ -110,20 +113,45 @@ export default function InteractiveBackground() {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [resolvedTheme]);
+  }, [resolvedTheme, mounted]);
+
+  if (!mounted) return null;
+
+  const isDark = resolvedTheme === 'dark';
+  
+  // Use highly performant pure CSS radial gradients instead of DOM blur filters to eliminate lag
+  const gradientMesh = isDark 
+    ? `radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+       radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+       radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%)`
+    : `radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.12) 0%, transparent 40%),
+       radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+       radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 40%)`;
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{
+    <>
+      <div style={{
         position: "fixed",
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
+        zIndex: 0,
         pointerEvents: "none",
-        zIndex: 0
-      }}
-    />
+        background: gradientMesh
+      }} />
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          zIndex: 1
+        }}
+      />
+    </>
   );
 }
