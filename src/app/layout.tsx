@@ -14,6 +14,7 @@ const syne = Syne({ subsets: ["latin"], variable: "--font-display" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eshaannair.vercel.app"),
   title: "Eshaan Nair | Full-Stack & AI Engineer",
   description: "Portfolio of Eshaan Nair, a Computer Science student building end-to-end applications, local-first AI memory systems, and modern web experiences.",
   openGraph: {
