@@ -22,11 +22,20 @@ export const metadata: Metadata = {
     url: "https://eshaannair.com",
     siteName: "Eshaan Nair",
     type: "website",
+    images: [
+      {
+        url: "https://eshaannair.com/og-image.png", // Replace with your actual thumbnail URL
+        width: 1200,
+        height: 630,
+        alt: "Eshaan Nair - Full-Stack & AI Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Eshaan Nair | Full-Stack & AI Engineer",
     description: "Portfolio of Eshaan Nair, a Computer Science student building end-to-end applications, local-first AI memory systems, and modern web experiences.",
+    images: ["../../../public/thumbnail.png"], // Replace with your actual thumbnail URL
   }
 };
 

@@ -50,5 +50,22 @@ If you are using this code for your own portfolio, you **must** update the AI's 
 2. Locate the `systemPrompt` variable.
 3. Replace the text with your own name, education, projects, and work experience. The LLM will strictly use the context provided in this prompt to answer any questions users ask it!
 
+## Social Sharing & Open Graph
+
+The portfolio includes **Open Graph** and **Twitter Card** meta tags in `src/app/layout.tsx` so that link previews (on LinkedIn, Twitter, Slack, etc.) show a rich thumbnail instead of a blank card.
+
+### OG Image
+Place a **1200×630px** PNG at:
+```
+public/og-image.png
+```
+This image will automatically be used as the thumbnail whenever your portfolio link is shared. If the file is missing, social platforms will fall back to a blank preview.
+
+> **LinkedIn tip:** Add your portfolio URL to the LinkedIn Featured section as a **Link** (not Media). LinkedIn will auto-fetch the `og:image` and show it as a clickable thumbnail that still redirects to your site. Use the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) to force a re-scrape after deploying.
+
+If you are forking this repo, update the `url`, `images`, and `siteName` fields in the `metadata` export inside `src/app/layout.tsx` to match your own domain.
+
+---
+
 ## Deployment
 When you are ready to deploy to Vercel, make sure you add `GROQ_API_KEY` to your Vercel Project Environment Variables before hitting deploy!
