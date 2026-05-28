@@ -1,6 +1,6 @@
 # AI Engineer Portfolio
 
-A highly polished, cinematic, and responsive personal portfolio built with **Next.js**, featuring smooth scroll animations, a custom dark/light theme engine, and a fully functional AI Chatbot powered by **Groq**.
+A highly polished, cinematic, and responsive personal portfolio built with **Next.js**, featuring smooth scroll animations, a custom dark/light theme engine, Open Graph social sharing, and a fully functional AI Chatbot powered by **Groq**.
 
 ## Features
 - **Cinematic Animations**: Powered by `framer-motion` for buttery smooth section reveals.
@@ -48,7 +48,16 @@ If you are using this code for your own portfolio, you **must** update the AI's 
 
 1. Open `src/app/api/chat/route.ts`.
 2. Locate the `systemPrompt` variable.
-3. Replace the text with your own name, education, projects, and work experience. The LLM will strictly use the context provided in this prompt to answer any questions users ask it!
+3. Replace the following fields with your own information:
+   - **Name** — swap out "Eshaan Nair" everywhere
+   - **Current Role** — your job title, company, location, and a brief description of your work
+   - **Education** — your university/school and degree
+   - **Expertise** — your tech stack
+   - **Projects** — your key projects with a short description each
+   - **Current Status** — whether you're open to work, employed, etc.
+   - **Contact email** — your email address
+
+The LLM will strictly use the context provided in this prompt to answer any questions recruiters or visitors ask it.
 
 ## Social Sharing & Open Graph
 

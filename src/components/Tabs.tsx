@@ -14,7 +14,7 @@ export default function Tabs() {
         border: '1px solid var(--border-color)',
         marginBottom: '1.5rem'
       }}>
-        <button 
+        <button
           onClick={() => setActiveTab('work')}
           style={{
             flex: 1,
@@ -34,7 +34,7 @@ export default function Tabs() {
         >
           Work
         </button>
-        <button 
+        <button
           onClick={() => setActiveTab('education')}
           style={{
             flex: 1,
@@ -56,7 +56,7 @@ export default function Tabs() {
         </button>
       </div>
 
-      <div style={{ 
+      <div style={{
         border: '1px solid var(--border-color)',
         borderRadius: '12px',
         padding: '1.5rem',
@@ -67,8 +67,26 @@ export default function Tabs() {
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                  <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>Full-Stack Developer Intern</h3>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>June 2026 – Present</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem' }}>
+                  <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Ven Analytics</div>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Pune, Maharashtra</span>
+                </div>
+                <p style={{ margin: '0.5rem 0 0 0', color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                  Developing scalable backend systems and designing AI pipelines — including Retrieval-Augmented Generation (RAG) architectures and LLM integrations — to power intelligent, data-driven applications.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ height: '1px', backgroundColor: 'var(--border-color)', width: '100%' }}></div>
+
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                   <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>Freelance Web & AI Developer</h3>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>2023 – Present</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>2024 – Present</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem' }}>
                   <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Self-Employed</div>

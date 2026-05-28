@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Eshaan Nair | Full-Stack & AI Engineer",
     description: "Portfolio of Eshaan Nair, a Computer Science student building end-to-end applications, local-first AI memory systems, and modern web experiences.",
-    url: "https://eshaannair.com",
+    url: "https://eshaannair.vercel.app",
     siteName: "Eshaan Nair",
     type: "website",
     images: [
       {
-        url: "https://eshaannair.com/og-image.png", // Replace with your actual thumbnail URL
+        url: "https://eshaannair.vercel.app/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Eshaan Nair - Full-Stack & AI Engineer",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eshaan Nair | Full-Stack & AI Engineer",
     description: "Portfolio of Eshaan Nair, a Computer Science student building end-to-end applications, local-first AI memory systems, and modern web experiences.",
-    images: ["../../../public/thumbnail.png"], // Replace with your actual thumbnail URL
+    images: ["https://eshaannair.vercel.app/thumbnail.png"],
   }
 };
 
