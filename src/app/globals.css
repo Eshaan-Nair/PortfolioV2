@@ -75,60 +75,6 @@ a:hover {
   align-items: start;
 }
 
-@media (max-width: 1024px) {
-  .layout-container {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    padding: 0 1.5rem;
-    gap: 1rem;
-  }
-  .left-sidebar {
-    position: static;
-    height: auto;
-    padding: 2rem 0;
-  }
-  .right-content {
-    padding-top: 1rem;
-    gap: 4rem;
-  }
-  .sidebar-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 1rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .sidebar-nav::-webkit-scrollbar {
-    display: none;
-  }
-  .nav-line {
-    display: none;
-  }
-  .sidebar-socials {
-    display: flex;
-    gap: 1.5rem;
-    color: var(--text-muted);
-    margin-top: 1rem;
-  }
-  
-  /* Mobile Hexagon Grid Scaling */
-  .hexagon-wrapper {
-    transform: scale(0.65) !important;
-    margin-top: -50px;
-    margin-bottom: -50px;
-  }
-}
-@media (max-width: 480px) {
-  .hexagon-wrapper {
-    transform: scale(0.55) !important;
-    margin-top: -80px;
-    margin-bottom: -80px;
-  }
-}
-
 .left-sidebar {
   position: sticky;
   top: 0;
@@ -194,3 +140,68 @@ a:hover {
   margin-top: 2.5rem;
 }
 
+@media (max-width: 1024px) {
+  .layout-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1.5rem !important;
+    gap: 1rem !important;
+    overflow-x: hidden !important;
+  }
+  .left-sidebar {
+    position: static;
+    height: auto;
+    padding: 2rem 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .right-content {
+    padding-top: 1rem;
+    gap: 4rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-line {
+    display: none;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+  .sidebar-socials {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+  }
+  
+  /* Mobile Hexagon Grid Scaling */
+  .hexagon-wrapper {
+    transform: scale(0.65) !important;
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+}
+@media (max-width: 480px) {
+  .hexagon-wrapper {
+    transform: scale(0.55) !important;
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+}

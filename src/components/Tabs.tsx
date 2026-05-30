@@ -66,11 +66,11 @@ export default function Tabs() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                   <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>Full-Stack Developer Intern</h3>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>June 2026 – Present</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem', gap: '0.5rem' }}>
                   <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Ven Analytics</div>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Pune, Maharashtra</span>
                 </div>
@@ -84,11 +84,11 @@ export default function Tabs() {
 
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                   <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>Freelance Web & AI Developer</h3>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>2024 – Present</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem', gap: '0.5rem' }}>
                   <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Self-Employed</div>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Remote</span>
                 </div>
@@ -104,11 +104,11 @@ export default function Tabs() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                   <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>KIIT University</h3>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Sept. 2022 – 2026</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.75rem', gap: '0.5rem' }}>
                   <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Bachelor of Technology in Computer Science and Engineering</div>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Bhubaneswar, Odisha</span>
                 </div>
@@ -124,11 +124,11 @@ export default function Tabs() {
 
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
               <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                   <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1.1rem', color: 'var(--foreground)' }}>St. Joseph’s Co-Ed School</h3>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Feb. 2010 – Mar. 2022</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '0.5rem' }}>
                   <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>Higher Secondary Education</div>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Bhopal, Madhya Pradesh</span>
                 </div>

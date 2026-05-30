@@ -111,7 +111,7 @@ export default function Chatbot() {
         style={{
           position: "fixed",
           bottom: `${bottomOffset}px`,
-          left: "2rem",
+          right: "2rem",
           width: "55px",
           height: "55px",
           borderRadius: "50%",
@@ -142,7 +142,7 @@ export default function Chatbot() {
             style={{
               position: "fixed",
               bottom: `${bottomOffset + 70}px`,
-              left: "2rem",
+              right: "2rem",
               backgroundColor: "var(--foreground)",
               color: "var(--background)",
               padding: "0.5rem 1rem",
@@ -160,7 +160,7 @@ export default function Chatbot() {
             <div style={{
               position: "absolute",
               bottom: "-4px",
-              left: "20px",
+              right: "20px",
               width: "10px",
               height: "10px",
               backgroundColor: "var(--foreground)",
@@ -182,7 +182,7 @@ export default function Chatbot() {
             style={{
               position: "fixed",
               bottom: `${bottomOffset}px`,
-              left: "2rem",
+              right: "2rem",
               width: "350px",
               height: "500px",
               maxWidth: "calc(100vw - 4rem)",

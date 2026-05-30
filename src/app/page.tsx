@@ -77,7 +77,7 @@ export default function Home() {
         position: 'relative',
         zIndex: 10
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
             <span style={{ fontWeight: 'bold', color: 'var(--foreground)', fontFamily: 'var(--font-display)' }}>Eshaan Nair</span>
           </div>
@@ -90,14 +90,14 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', fontSize: '0.8rem', gap: '1rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', gap: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
             <span>© {new Date().getFullYear()}</span>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <span>All rights reserved.</span>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1.5rem', flexWrap: 'wrap' }}>
             <a href="https://github.com/Eshaan-Nair" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/eshaan-nair00/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:eshaannair3456@gmail.com">Email</a>

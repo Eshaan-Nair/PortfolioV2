@@ -62,19 +62,21 @@ export default function Skills() {
     <section>
       <h2 className="heading-serif" style={{ margin: '0 0 4rem 0', fontSize: '1.8rem', textAlign: 'center' }}>Technical Ecosystem</h2>
 
-      <div className="hexagon-wrapper" style={{ maxWidth: '800px', margin: '0 auto', paddingBottom: '2rem' }}>
-        {rows.map((row, rowIndex) => (
-          <div key={rowIndex} style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '6px',
-            marginTop: rowIndex > 0 ? '-32px' : '0'
-          }}>
-            {row.map((skill, i) => (
-              <Hexagon key={i} skill={skill} />
-            ))}
-          </div>
-        ))}
+      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <div className="hexagon-wrapper" style={{ maxWidth: '800px', margin: '0 auto', paddingBottom: '2rem' }}>
+          {rows.map((row, rowIndex) => (
+            <div key={rowIndex} style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '6px',
+              marginTop: rowIndex > 0 ? '-32px' : '0'
+            }}>
+              {row.map((skill, i) => (
+                <Hexagon key={i} skill={skill} />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export default function LandingHero() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '2rem 4rem',
+        padding: 'clamp(1.5rem, 5vw, 2rem) clamp(1.5rem, 5vw, 4rem)',
         zIndex: 10
       }}>
         {/* Social Icons (Left) */}
@@ -27,7 +27,7 @@ export default function LandingHero() {
         </div>
 
         {/* Nav Links (Right) */}
-        <nav style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+        <nav className="desktop-only" style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
           <a href="#about" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-muted)'}>About Me</a>
           <a href="#experience" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-muted)'}>Experience</a>
           <a href="#projects" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--foreground)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-muted)'}>Projects</a>
@@ -47,15 +47,15 @@ export default function LandingHero() {
         padding: '0 2rem'
       }}>
         <h1 style={{ margin: '0', lineHeight: 1.05, letterSpacing: '-0.04em', fontFamily: 'var(--font-display)', color: 'var(--foreground)' }}>
-          <span style={{ fontSize: '5rem', fontWeight: 800 }}>Eshaan Nair</span><br />
-          <span style={{ fontSize: '3.5rem', fontWeight: 700 }}>AI Engineer</span>
+          <span style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', fontWeight: 800 }}>Eshaan Nair</span><br />
+          <span style={{ fontSize: 'clamp(2rem, 7vw, 3.5rem)', fontWeight: 700 }}>AI Engineer</span>
         </h1>
 
         <p style={{ margin: '2rem 0', color: 'var(--text-muted)', maxWidth: '600px', fontSize: '1.1rem', lineHeight: 1.6 }}>
           Full-stack developer building AI-native tools that actually work.
         </p>
 
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{
             padding: '0.8rem 1.5rem', backgroundColor: 'var(--foreground)', color: 'var(--background)',
             borderRadius: '6px', fontWeight: 600, textDecoration: 'none',

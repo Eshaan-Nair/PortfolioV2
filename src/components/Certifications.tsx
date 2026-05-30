@@ -17,8 +17,10 @@ export default function Certifications() {
             backgroundColor: 'var(--card-bg)',
             transition: 'transform 0.2s, box-shadow 0.2s',
             display: 'flex',
+            flexWrap: 'wrap',
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
+            gap: '0.5rem'
           }}>
             <div>
               <h3 style={{ margin: '0 0 0.25rem 0', fontSize: '1rem', color: 'var(--foreground)' }}>{c.title}</h3>

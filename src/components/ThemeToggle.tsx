@@ -42,7 +42,7 @@ export default function ThemeToggle() {
       style={{
         position: 'fixed',
         bottom: `${bottomOffset}px`,
-        right: '2rem',
+        left: '2rem',
         width: '50px',
         height: '50px',
         borderRadius: '50%',

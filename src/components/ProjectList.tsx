@@ -5,7 +5,7 @@ import { projectsData } from '@/data/projects';
 export default function ProjectList() {
   return (
     <section>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1.5rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1.5rem', gap: '0.5rem' }}>
         <h2 className="heading-serif" style={{ margin: 0, fontSize: '1.8rem' }}>Featured Projects</h2>
         <Link href="/projects" style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}>
           view more <span>→</span>
